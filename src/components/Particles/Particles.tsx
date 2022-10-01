@@ -29,7 +29,7 @@ const ParticlesBackground = () => {
 						value: "#000814",
 					},
 				},
-				fpsLimit: 30,
+				fpsLimit: 120,
 				interactivity: {
 					events: {
 						onClick: {
@@ -60,7 +60,7 @@ const ParticlesBackground = () => {
 						color: "#ffffff",
 						distance: 150,
 						enable: true,
-						opacity: 0.5,
+						opacity: 0.1,
 						width: 1,
 					},
 					collisions: {
@@ -79,12 +79,12 @@ const ParticlesBackground = () => {
 					number: {
 						density: {
 							enable: true,
-							area: 800,
+							area: 500,
 						},
 						value: 80,
 					},
 					opacity: {
-						value: 0.5,
+						value: 0.1,
 					},
 					shape: {
 						type: "circle",
