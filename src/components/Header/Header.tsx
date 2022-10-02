@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default function Header(props: any) {
-	
+
 	return (
 		<>
 			<Container>
@@ -12,6 +12,7 @@ export default function Header(props: any) {
 }
 
 const Container = styled.header`
+
 	display: flex;
 	justify-content: flex-end;
 	font-family: "Encode Sans", sans-serif;
@@ -22,8 +23,13 @@ const Container = styled.header`
 `;
 
 const Menu = styled.ul`
+
 	list-style-type: none;
-	width: 50%;
+	width: 50vw;
 	display: flex;
 	justify-content: space-evenly;
+
+	@media (max-width: 600px) {
+		width: 100vw;
+	}
 `;
