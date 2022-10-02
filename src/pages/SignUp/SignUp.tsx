@@ -12,6 +12,8 @@ export default function SignUp() {
 		<>
 			<Header>
 				<MenuOption> Home </MenuOption>
+				<MenuOption> Last News </MenuOption>
+				<MenuOption> Educational </MenuOption>
 				<MenuOption> About Us </MenuOption>
 			</Header>
 			<Container>
