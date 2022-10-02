@@ -18,7 +18,7 @@ export const IconBox = styled.div`
 export const TittleBox = styled.div`
 	display: flex;
 	align-items: center;
-	padding-left: 10px;
+	margin-left: 1vw;
 `;
 export const Tittle = styled.h1`
 	font-weight: 900;
@@ -27,5 +27,8 @@ export const Tittle = styled.h1`
 
 	@media (min-width: 600px) {
 		font-size: 5vw;
+	}
+	@media (max-width: 450px) {
+		font-size: 7vw;
 	}
 `;

@@ -18,15 +18,23 @@ const Container = styled.header`
 	font-size: 20px;
 	color: #ffffff;
 	margin-top: 5%;
+
+	@media (max-width: 450px) {
+		justify-content: space-evenly
+	}
 `;
 
 const Menu = styled.ul`
 	list-style-type: none;
-	width: 50vw;
+	width: 80vw;
 	display: flex;
 	justify-content: space-evenly;
 
 	@media (max-width: 600px) {
+		font-size: 4vw;
+	}
+	@media (max-width: 450px) {
+		width: 100vw;
 		font-size: 4vw;
 	}
 `;
