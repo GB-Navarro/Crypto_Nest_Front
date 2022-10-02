@@ -13,9 +13,12 @@ function formatData(event, name: string, email: string, password: string, confir
     return data;
 }
 
-async function register(data) {
+async function register(data, navigate) {
+
+
     try {
         await axios.post("http://localhost:5000/sign-up", data);
+        navigate("/");
     } catch (error) {
         console.log("The following error has ben ocurred \n", error);
     }

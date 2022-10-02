@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Container, LogoBox, Form, IconBox } from "./styles";
 
 import IonIcon from "@reacticons/ionicons";
@@ -11,6 +12,8 @@ import SendButton from "../../components/Authentication/SendButton/SendButton";
 import signUpUtils from "./utils/signUpUtils";
 
 export default function SignUp() {
+	const navigate = useNavigate();
+
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -39,7 +42,7 @@ export default function SignUp() {
 							password,
 							confirmedPassword
 						);
-						await signUpUtils.register(data);
+						await signUpUtils.register(data, navigate);
 					}}
 				>
 					<InputBar
