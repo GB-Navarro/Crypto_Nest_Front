@@ -1,7 +1,6 @@
 import axios from "axios";
 
 function formatData(event, name: string, email: string, password: string, confirmedPassword: string) {
-
     event.preventDefault();
 
     const data = {
@@ -15,7 +14,6 @@ function formatData(event, name: string, email: string, password: string, confir
 }
 
 async function register(data) {
-
     try {
         await axios.post("http://localhost:5000/sign-up", data);
     } catch (error) {
