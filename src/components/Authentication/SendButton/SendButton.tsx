@@ -1,9 +1,9 @@
 import { Button } from "./styles";
 
-export default function SendButton(){
+export default function SendButton(props){
     return(
         <>
-            <Button> Register </Button>
+            <Button> {props.children} </Button>
         </>
     )
 }
