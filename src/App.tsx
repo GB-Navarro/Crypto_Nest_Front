@@ -1,11 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home/Home";
 import GlobalStyles from "./globalStyles";
+
 function App() {
 	return (
 		<>
 			<GlobalStyles></GlobalStyles>
-			<div className="App">
-				<header className="App-header"></header>
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />}></Route>
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
