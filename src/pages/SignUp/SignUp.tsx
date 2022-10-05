@@ -27,9 +27,9 @@ export default function SignUp() {
 					<Link to="/">
 						<MenuOption> Home </MenuOption>
 					</Link>
-					<MenuOption> Last News </MenuOption>
-					<MenuOption> Educational </MenuOption>
-					<MenuOption> About Us </MenuOption>
+					<Link to="/sign-in">
+						<MenuOption> Sign In </MenuOption>
+					</Link>
 				</Header>
 			</Box>
 			<Background>
