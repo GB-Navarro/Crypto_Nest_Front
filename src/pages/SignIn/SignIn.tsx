@@ -5,20 +5,18 @@ import { Main, LogoBox, Form, IconBox, Background, Box } from "./styles";
 
 import IonIcon from "@reacticons/ionicons";
 import Logo from "../../components/Logo/Logo";
-import signUpUtils from "./utils/signUpUtils";
+import signInUtils from "./utils/signInUtils";
 import Header from "../../components/Header/Header/Header";
 import MenuOption from "../../components/Header/MenuOptions/MenuOptions";
 import ParticlesBackground from "../../components/Particles/Particles";
 import InputBar from "../../components/Authentication/InputBar/InputBar";
 import SendButton from "../../components/Authentication/SendButton/SendButton";
 
-export default function SignUp() {
+export default function SignIn() {
 	const navigate = useNavigate();
 
-	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [confirmedPassword, setConfirmedPassword] = useState("");
 
 	return (
 		<>
@@ -27,8 +25,8 @@ export default function SignUp() {
 					<Link to="/">
 						<MenuOption> Home </MenuOption>
 					</Link>
-					<Link to="/sign-in">
-						<MenuOption> Sign In </MenuOption>
+					<Link to="/sign-up">
+						<MenuOption> Sign Up </MenuOption>
 					</Link>
 				</Header>
 			</Box>
@@ -42,23 +40,14 @@ export default function SignUp() {
 					</LogoBox>
 					<Form
 						onSubmit={async (event) => {
-							const data = signUpUtils.formatData(
+							const data = signInUtils.formatData(
 								event,
-								name,
 								email,
-								password,
-								confirmedPassword
+								password
 							);
-							await signUpUtils.register(data, navigate);
+							await signInUtils.login(data, navigate);
 						}}
 					>
-						<InputBar
-							placeholder="Name"
-							type="text"
-							maxLength={15}
-							value={name}
-							onChange={(event) => setName(event.target.value)}
-						/>
 						<InputBar
 							placeholder="E-mail"
 							type="email"
@@ -74,15 +63,7 @@ export default function SignUp() {
 								setPassword(event.target.value)
 							}
 						/>
-						<InputBar
-							placeholder="Confirm Password"
-							type="password"
-							value={confirmedPassword}
-							onChange={(event) =>
-								setConfirmedPassword(event.target.value)
-							}
-						/>
-						<SendButton type="submit"> Register </SendButton>
+						<SendButton type="submit"> Login </SendButton>
 					</Form>
 					<IconBox>
 						<IonIcon name="logo-google"></IonIcon>
