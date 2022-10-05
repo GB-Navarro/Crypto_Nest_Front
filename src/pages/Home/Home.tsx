@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Container, Box, Background, Main, Tittle, Text, Button } from "./styles";
 
-import Header from "../../components/Header/Header";
-import MenuOption from "../../components/Header/MenuOptions";
+import Header from "../../components/Header/Header/Header";
+import MenuOption from "../../components/Header/MenuOptions/MenuOptions";
 import ParticlesBackground from "../../components/Particles/Particles";
 
 export default function Home() {
