@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home/Home";
+import Home from "./pages/Home/Home";
+import SignUp from "./pages/SignUp/SignUp";
 import GlobalStyles from "./globalStyles";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
 			<GlobalStyles></GlobalStyles>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<Home />}></Route>
+					<Route path="/" element={ <Home /> }></Route>
+					<Route path="/sign-up" element={ <SignUp/> }></Route>
 				</Routes>
 			</BrowserRouter>
 		</>
