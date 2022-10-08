@@ -9,9 +9,9 @@ export default function User() {
 	return (
 		<>
 			<UserHeader />
-			{/*<Background>
+			<Background>
 				<ParticlesBackground></ParticlesBackground>
-	</Background>*/}
+			</Background>
 			<Container>
 				<Link to="/coins">
 					<UserMenu> 🪙 Coins Info </UserMenu>
