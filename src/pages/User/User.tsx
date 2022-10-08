@@ -1,4 +1,4 @@
-import { Background, Container, Box } from "./styles";
+import { Background, Container } from "./styles";
 import { Link } from "react-router-dom";
 
 import UserMenu from "../../components/UserMenu/UserMenu";

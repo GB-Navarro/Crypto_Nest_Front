@@ -13,12 +13,3 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 `;
-
-export const Box = styled.div`
-	display: flex;
-	margin-bottom: 10vh;
-
-	main {
-		margin-right: 5vw;
-	}
-`;
