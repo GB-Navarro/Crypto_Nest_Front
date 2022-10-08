@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
+import User from "./pages/User/User";
 import SignUp from "./pages/SignUp/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import GlobalStyles from "./globalStyles";
@@ -14,6 +15,7 @@ function App() {
 					<Route path="/" element={ <Home /> }></Route>
 					<Route path="/sign-up" element={ <SignUp/> }></Route>
 					<Route path="/sign-in" element={ <SignIn/> }></Route>
+					<Route path="/user" element={ <User/> }></Route>
 				</Routes>
 			</BrowserRouter>
 		</>
