@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import SignIn from "./pages/SignIn/SignIn";
 import GlobalStyles from "./globalStyles";
 import Coins from "./pages/Coins/Coins";
+import Coin from "./pages/Coin/Coin";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path="/sign-in" element={ <SignIn/> }></Route>
 					<Route path="/user" element={ <User/> }></Route>
 					<Route path="/coins" element={ <Coins/> }></Route>
+					<Route path="/coin/:id" element={ <Coin/>}></Route>
 				</Routes>
 			</BrowserRouter>
 		</>
