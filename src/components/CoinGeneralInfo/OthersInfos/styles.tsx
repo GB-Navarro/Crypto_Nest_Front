@@ -6,6 +6,10 @@ export const Container = styled.div`
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
+	@media(max-width: 450px){
+		width: 90%;
+		margin-bottom: 5vh;
+	}	
 `;
 
 export const SubTittleBox = styled.div`
@@ -40,5 +44,8 @@ export const Type = styled.p`
 
 	span{
 		color: #FFFFFF;
+	}
+	@media(max-width:450px){
+		font-size: 11px;
 	}
 `;

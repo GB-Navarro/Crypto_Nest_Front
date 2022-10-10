@@ -8,6 +8,9 @@ import {
 	Info,
 	ArrowUpBox,
 	ArrowDownBox,
+	ActuallyPriceInfo,
+	PriceChangeInfo,
+	PriceChangeLastMonthInfo,
 } from "./styles";
 import { Link } from "react-router-dom";
 
@@ -43,15 +46,15 @@ export default function Coin(props) {
 						</Description>
 						<Image src={image} alt="Coin Image" />
 					</Aside>
-					<CoinInfo>
+					<ActuallyPriceInfo>
 						<Description>Price</Description>
 						<Info>{"$" + currentPrice}</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</ActuallyPriceInfo>
+					<ActuallyPriceInfo>
 						<Description>MarketCap</Description>
 						<Info>{"$" + marketCap}</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</ActuallyPriceInfo>
+					<PriceChangeLastMonthInfo>
 						<Description>24h</Description>
 						<Info
 							color={
@@ -64,8 +67,8 @@ export default function Coin(props) {
 								? priceChangePercentage24h.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeLastMonthInfo>
+					<PriceChangeLastMonthInfo>
 						<Description>7d</Description>
 						<Info
 							color={
@@ -78,8 +81,8 @@ export default function Coin(props) {
 								? priceChangePercentage7d.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeLastMonthInfo>
+					<PriceChangeLastMonthInfo>
 						<Description>14d</Description>
 						<Info
 							color={
@@ -92,8 +95,8 @@ export default function Coin(props) {
 								? priceChangePercentage14d.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeLastMonthInfo>
+					<PriceChangeLastMonthInfo>
 						<Description>30d</Description>
 						<Info
 							color={
@@ -106,8 +109,8 @@ export default function Coin(props) {
 								? priceChangePercentage30d.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeLastMonthInfo>
+					<PriceChangeInfo>
 						<Description>60d</Description>
 						<Info
 							color={
@@ -120,8 +123,8 @@ export default function Coin(props) {
 								? priceChangePercentage60d.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeInfo>
+					<PriceChangeInfo>
 						<Description>200d</Description>
 						<Info
 							color={
@@ -134,8 +137,8 @@ export default function Coin(props) {
 								? priceChangePercentage200d.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
-					<CoinInfo>
+					</PriceChangeInfo>
+					<PriceChangeInfo>
 						<Description>1y</Description>
 						<Info
 							color={
@@ -148,7 +151,7 @@ export default function Coin(props) {
 								? priceChangePercentage1y.toFixed(2) + "%"
 								: ""}
 						</Info>
-					</CoinInfo>
+					</PriceChangeInfo>
 				</CoinBox>
 			</Link>
 		</>

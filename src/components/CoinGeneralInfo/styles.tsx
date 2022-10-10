@@ -23,4 +23,12 @@ export const BottomBox = styled.div`
 	width: 90%;
 	display: flex;
 	padding-bottom: 5vh;
+
+	@media(max-width:450px){
+		width:100%;
+		display: block;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 `;

@@ -16,6 +16,9 @@ export const Tittle = styled.h1`
 	font-weight: 900;
 	color: #ffc300;
 	padding-bottom: 15vh;
+	@media(max-width: 850px){
+		padding-bottom: 0vh;
+	}
 `;
 
 
