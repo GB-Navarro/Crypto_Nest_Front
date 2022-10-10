@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 export const Box = styled.div`
 	width: 85vw;
-	height: 90vh;
+	height: 100vh;
 	position: relative;
 	z-index: 2;
 	display: flex;
