@@ -8,13 +8,16 @@ import {
 	Name,
 	SignOut
 } from "./styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
+import userHeaderUtils from "./utils/userHeaderUtils";
 import userContext from "../../context/userContext";
 export default function UserHeader(props) {
 
-	const { name }:any = useContext(userContext);
+	const { name, token }:any = useContext(userContext);
+
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -30,7 +33,9 @@ export default function UserHeader(props) {
 							<Name> {name} </Name>
 						</NameBox>
 					</UserInfo>
-					<SignOut> Sign Out </SignOut>
+					<SignOut onClick={async () => {
+						await userHeaderUtils.logout(token, navigate)
+					}}> Sign Out </SignOut>
 				</Header>
 			</Container>
 		</>
