@@ -5,6 +5,8 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	z-index:2;
 `;
 export const Box = styled.div`
 	width: 85vw;
