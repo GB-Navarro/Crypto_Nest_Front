@@ -1,5 +1,6 @@
 import {
 	Container,
+	Background,
 	SectionBox,
 	Tittle,
 	LoadingContainer,
@@ -9,6 +10,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 
 import axios from "axios";
+import ParticlesBackground from "../../components/Particles/Particles";
 import Loading from "../../components/Loading/Loading";
 import UserHeader from "../../components/UserHeader/UserHeader";
 import CoinGeneralInfo from "../../components/CoinGeneralInfo/CoinGeneralInfo";
@@ -41,6 +43,9 @@ export default function Coin() {
 	return (
 		<>
 			<UserHeader></UserHeader>
+			<Background>
+				<ParticlesBackground></ParticlesBackground>
+			</Background>
 			{coinData === null ? (
 				<>
 					<LoadingContainer>
