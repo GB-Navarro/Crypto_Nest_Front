@@ -24,4 +24,8 @@ export const TextBox = styled.div`
 	width: 90%;
 	margin: 5vh 0vh 5vh 0vh;
 `;
-export const Text = styled.p``;
+export const Text = styled.p`
+	@media (max-width: 450px) {
+		font-size: 10px;
+	}
+`;

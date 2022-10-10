@@ -5,6 +5,9 @@ export const Container = styled.section`
 	border-radius: 15px;
 	margin-bottom: 2vh;
 	padding: 2vh 2vw 2vh 2vw;
+	@media(max-width: 850px){
+		width: 95%;
+	}
 `;
 
 export const MainInfo = styled.p`

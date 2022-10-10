@@ -7,6 +7,11 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin-left: 10%;
+
+	@media(max-width: 450px){
+		width: 90%;
+		margin-left: 0%;
+	}
 `;
 export const SubTittleBox = styled.div`
 	display: flex;

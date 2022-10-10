@@ -5,6 +5,12 @@ export const Container = styled.main`
 	flex-direction: column;
 	align-items: center;
 	margin-top: 20vh;
+	position: relative;
+	z-index: 2;
+`;
+export const Background = styled.div`
+	position: relative;
+	z-index: 1;
 `;
 export const SectionBox = styled.section`
 	width: 85vw;
@@ -29,6 +35,8 @@ export const LoadingContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 `;
 export const LoadingBox = styled.div`
 	width: 50vw;
@@ -37,4 +45,3 @@ export const LoadingBox = styled.div`
 	justify-content: center;
 	align-items: center;
 `;
-
