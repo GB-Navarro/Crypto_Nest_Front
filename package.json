@@ -56,6 +56,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
     "@types/axios": "^0.14.0",
-    "@types/chart.js": "^2.9.37"
+    "@types/chart.js": "^2.9.37",
+    "dotenv-webpack": "^8.0.1"
   }
 }
