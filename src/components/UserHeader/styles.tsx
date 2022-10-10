@@ -1,18 +1,26 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+	display: flex;
+	justify-content: center;
+`;
+
 export const Header = styled.header`
-	width: 100vw;
+	width: 95vw;
+	height: 16vh;
 	position: relative;
 	z-index: 2;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-top: 4vw;
-
+	border-radius: 15px;
+	background-color: rgba(0, 53, 102, 0.25);
 	@media (min-width: 850px) {
 		margin-top: 2vw;
 	}
 `;
-export const Container = styled.div`
+export const UserInfo = styled.div`
 	display: flex;
 `;
 export const ProfileImageBox = styled.div`
@@ -54,8 +62,8 @@ export const Name = styled.p`
 	font-weight: 700;
 	font-size: 3vw;
 
-	@media(min-width:450px) and (max-width: 850px){
-		padding-top:5px;
+	@media (min-width: 450px) and (max-width: 850px) {
+		padding-top: 5px;
 	}
 	@media (min-width: 850px) {
 		font-size: 1vw;
@@ -76,8 +84,8 @@ export const SignOut = styled.div`
 	@media (min-width: 450px) and (max-width: 850px) {
 		height: 12vw;
 		margin: 2vw 0vw 0vw 3vw;
-		font-size:3vw;
-		padding-top:5px;
+		font-size: 3vw;
+		padding-top: 5px;
 	}
 	@media (min-width: 850px) {
 		width: 10vw;
