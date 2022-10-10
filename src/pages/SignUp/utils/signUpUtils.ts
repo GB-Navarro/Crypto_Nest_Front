@@ -17,7 +17,7 @@ async function register(data, navigate) {
 
 
     try {
-        await axios.post("http://localhost:5000/sign-up", data);
+        await axios.post("https://crypto-nest-api.herokuapp.com/sign-up", data);
         navigate("/");
     } catch (error) {
         console.log("The following error has ben ocurred \n", error);
