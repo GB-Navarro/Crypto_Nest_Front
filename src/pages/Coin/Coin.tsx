@@ -6,25 +6,27 @@ import {
 	LoadingBox,
 } from "./styles";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import axios from "axios";
 import Loading from "../../components/Loading/Loading";
 import UserHeader from "../../components/UserHeader/UserHeader";
 import CoinGeneralInfo from "../../components/CoinGeneralInfo/CoinGeneralInfo";
 import CoinMarketData from "../../components/CoinMarketData/CoinMarketData";
+import userContext from "../../context/userContext";
 
 export default function Coin() {
 	const [coinData, setCoinData] = useState(null);
 
 	const { id } = useParams();
+	const { token }: any = useContext(userContext);
 
 	const url = `https://crypto-nest-api.herokuapp.com/coins/get/${id}`;
 
 	const config = {
 		headers: {
 			Authorization:
-				"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJFbWFpbCI6InRlc3RlMUBnbWFpbC5jb20iLCJpYXQiOjE2NjUzNTk0NjksImV4cCI6MTY2NTM2MzA2OX0.CzzcGGh-YV3OYTh4BK1fBSqyiasr1KkxIrshE-y6_N0",
+				`Bearer ${token}`,
 		},
 	};
 

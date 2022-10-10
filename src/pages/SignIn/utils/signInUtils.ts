@@ -12,12 +12,13 @@ function formatData(event, email: string, password: string) {
 }
 
 async function login(data, navigate) {
-    const localStorageKey = "&E)H@McQfTjWnZr4"
-
     try {
-        const token: any = await axios.post("http://localhost:5000/sign-in", data);
-
-        localStorage.setItem(localStorageKey, token);
+        const response: any = await axios.post("https://crypto-nest-api.herokuapp.com/sign-in", data);
+        const { name, email, token } = response.data;
+        
+        localStorage.setItem(process.env.REACT_APP_LOCALSTORAGE_NAME_KEY, name);
+        localStorage.setItem(process.env.REACT_APP_LOCALSTORAGE_EMAIL_KEY, email);
+        localStorage.setItem(process.env.REACT_APP_LOCALSTORAGE_TOKEN_KEY, token);
 
         navigate("/user");
     } catch (error) {

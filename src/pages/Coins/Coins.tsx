@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Container, Box, Background, LoadingBox } from "./styles";
 
 import axios from "axios";
@@ -6,16 +6,18 @@ import Loading from "../../components/Loading/Loading";
 import UserHeader from "../../components/UserHeader/UserHeader";
 import ParticlesBackground from "../../components/Particles/Particles";
 import Coin from "../../components/Coin/Coin";
+import userContext from "../../context/userContext";
 
 export default function Coins() {
+
+	const { token }: any = useContext(userContext);
 	const [coinsData, setCoinsData] = useState(null);
 
 	const url = "https://crypto-nest-api.herokuapp.com/coins/getAll";
 
 	const config = {
 		headers: {
-			Authorization:
-				"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJFbWFpbCI6InRlc3RlMUBnbWFpbC5jb20iLCJpYXQiOjE2NjUzMTIyNjcsImV4cCI6MTY2NTMxNTg2N30.ZE_7_H0l_zMG-lZ8k1H1A9wPLKhUvJ27s_4tELNGBhQ",
+			Authorization: `Bearer ${token}`,
 		},
 	};
 
@@ -23,7 +25,6 @@ export default function Coins() {
 		const promisse = axios.get(url, config);
 		promisse.then((response) => {
 			setCoinsData(response.data);
-			console.log(response.data);
 		});
 	}, []);
 

@@ -9,8 +9,13 @@ import {
 	SignOut
 } from "./styles";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
-export default function UserHeader() {
+import userContext from "../../context/userContext";
+export default function UserHeader(props) {
+
+	const { name }:any = useContext(userContext);
+
 	return (
 		<>
 			<Container>
@@ -22,7 +27,7 @@ export default function UserHeader() {
 							</ProfileImageBox>
 						</Link>
 						<NameBox>
-							<Name> Nome do usuário </Name>
+							<Name> {name} </Name>
 						</NameBox>
 					</UserInfo>
 					<SignOut> Sign Out </SignOut>
